@@ -36,8 +36,6 @@ const App = () => {
   const loadReactApp = () => {
     loadMicroApp({
       name: 'react-app',
-      // entry: '//localhost:3001',
-      // entry: '//localhost:3001/dist/reactApp.js',
       entry: '//localhost:3001/index.html',
       container: '#react-microfrontend',
     });
@@ -46,7 +44,7 @@ const App = () => {
   const loadVueApp = () => {
     loadMicroApp({
       name: 'vue-app',
-      entry: '//localhost:3002',
+      entry: '//localhost:3002/',
       container: '#vue-microfrontend',
     });
   };
