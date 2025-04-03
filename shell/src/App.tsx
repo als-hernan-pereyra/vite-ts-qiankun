@@ -10,8 +10,7 @@ const App = () => {
     registerMicroApps([
       {
         name: 'react-microfrontend',
-        // entry: '//localhost:3001',  // URL del micro-frontend React
-        entry: '//localhost:8080',  // URL del micro-frontend React
+        entry: '//localhost:3001',  // URL del micro-frontend React
         container: '#react-microfrontend',
         activeRule: '#/react',
         //activeRule: '/react',
@@ -37,8 +36,9 @@ const App = () => {
   const loadReactApp = () => {
     loadMicroApp({
       name: 'react-app',
-      entry: '//localhost:8080',
       // entry: '//localhost:3001',
+      // entry: '//localhost:3001/dist/reactApp.js',
+      entry: '//localhost:3001/index.html',
       container: '#react-microfrontend',
     });
   };

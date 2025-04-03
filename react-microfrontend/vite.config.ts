@@ -9,10 +9,31 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  define: {
+    // Mock process to avoid issues when using process.env or similar
+    'process.env': {},
+  },
   plugins: [react()],
   server: {
     port: 3001, // Configura el puerto que deseas
     open: true,  // Esto abrirá automáticamente el navegador al iniciar el servidor
+    //cors: true,
+    // cors: {
+    //   origin: 'http://localhost:3000', // Allow only requests from your shell app
+    //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    //   allowedHeaders: ['Content-Type', 'Authorization'],
+    // },
+    cors: {
+      origin: 'http://localhost:3000', // Allow requests from the shell app
+      methods: ['GET', 'POST'],
+    },
+    proxy: {
+      '/': {
+        target: 'http://localhost:3001',  // Replace with your micro-frontend server URL
+        changeOrigin: true,
+        secure: false, // If using HTTPS, set to true
+      },
+    },
   },
   base: '/',
   build: {
@@ -26,7 +47,7 @@ export default defineConfig({
       input: 'index.html',
       output: {
         format: 'system',        // Especifica el formato compatible con Qiankun
-        entryFileNames: 'reactApp.js', // Nombre del archivo de salida
+        entryFileNames: 'dist/reactApp.js', // Nombre del archivo de salida
       },
     },
   },
