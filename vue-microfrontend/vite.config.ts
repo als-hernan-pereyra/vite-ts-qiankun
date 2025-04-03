@@ -10,6 +10,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [vue()],
+  server: {
+    port: 3002, // Configura el puerto que deseas
+    open: true,  // Esto abrirá automáticamente el navegador al iniciar el servidor
+  },
   build: {
     lib: {
       entry: './src/VueApp.vue',

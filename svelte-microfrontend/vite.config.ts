@@ -10,6 +10,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [svelte()],
+  server: {
+    port: 3003, // Configura el puerto que deseas
+    open: true,  // Esto abrirá automáticamente el navegador al iniciar el servidor
+  },
   build: {
     lib: {
       entry: './src/SvelteApp.svelte',
