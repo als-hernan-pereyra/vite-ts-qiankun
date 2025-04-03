@@ -91,7 +91,3 @@ Una vez agregadas estas configuraciones, podrás cargar los microfrontends **Vue
 - Añadir pruebas para la integración de los microfrontends.
 
 ---
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
