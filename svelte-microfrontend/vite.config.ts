@@ -1,25 +1,25 @@
 // import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 
-// // https://vite.dev/config/
+// https://vite.dev/config/
 // export default defineConfig({
-//   plugins: [react()],
+//   plugins: [svelte()],
 // })
 
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [svelte()],
   build: {
     lib: {
-      entry: './src/ReactApp.tsx',
-      name: 'ReactApp',
-      fileName: 'reactApp',
+      entry: './src/SvelteApp.svelte',
+      name: 'SvelteApp',
+      fileName: 'svelteApp',
     },
     rollupOptions: {
       output: {
         format: 'system',
-        entryFileNames: 'reactApp.js',
+        entryFileNames: 'svelteApp.js',
       },
     },
   },
