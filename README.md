@@ -1,7 +1,3 @@
-Aquí tienes el `README.md` actualizado con la nota de que la configuración de **Vite** para correr los microfrontends **Vue** y **Svelte** aún está pendiente:
-
----
-
 # Plantilla de Proyecto Vite + TypeScript + Qiankun para Microfrontends
 
 Este es un **boilerplate de microfrontends** que utiliza **Qiankun** para implementar una arquitectura de microfrontends. Qiankun se basa en **single-spa** y ofrece una solución eficiente para construir aplicaciones de microfrontends escalables, mantenibles y listas para producción.
@@ -99,7 +95,3 @@ Una vez agregadas estas configuraciones, podrás cargar los microfrontends **Vue
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-¡Avísame si necesitas más ajustes o tienes alguna pregunta!
