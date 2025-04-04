@@ -12,4 +12,4 @@ npx http-server ./dist -p 3001 --cors
 
 # at shell app
 cd /shel
-npm run dev
+npm run dev 
